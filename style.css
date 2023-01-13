@@ -5,19 +5,25 @@ body{
 }
 
 .main{
-    background-image: url("Fondo1.jfif");
+    
     height: 900px;
     background-color: black;
     width: 100%;
     background-repeat: no-repeat;
+    position: absolute;
+}
 
+.main img{
+    width: 100%;
+    height: 100%;
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
-    
-    margin-top: -20px;
+    position: relative;
+    top: -870px;
+    margin-top: -30px;
 }
 
 .logo{
@@ -26,16 +32,25 @@ body{
     color:white;
     display: flex;
     font-size: 24px;
+    margin-top: -5px;
+    margin-bottom:5px ;
 }
+
 .pro{
-    color: rgb(240, 137, 3);
     padding-left: 3px;
+    background:#ff6200 ;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
 }
+
+
+
 
 .lista .extra{
     display: flex;
     flex-direction: row;
-    text-transform: uppercase;
+    text-transform: uppercase;  
     
 }
 
@@ -44,29 +59,76 @@ a{
     font-weight: 600;
     color: rgb(255, 255, 255);
 }
+.extra{
+    position: relative;
+    display: inline-block;
+}
 
 .lista .extra li a:hover{
-    color: rgb(240, 137, 3);
-
+    text-decoration: underline 3px;
+    text-decoration-color:#ff6200;
+    text-decoration-skip:10px ;
 }
 
 .lista .extra  li{
-    margin: 10px 100px 0 15px;
+    margin: 10px 50px 0 15px;
     list-style: none;
-    
-}
-.idioma{
-    position: relative;
-
+    color: #000;
 }
 
-.lista .extra ul{
+#menu{
     display: none;
     position: absolute;
-    top: 30px;
+    top: 45px;
     left: -55px;
 }
-.lista li:hover > ul{
+
+
+.brand{
+  position: absolute;
+}
+.brand li{
+    position: relative;
+    top: 5px;
+    left: 60px;
+}
+
+.idioma{
+    position: relative;
+}
+
+
+.lista li:hover >  #menu{
     display: block;
 }
+
+hr{
+    color: rgb(121, 121, 121) ;
+    border: solid 1spx;
+    position: relative;
+    top: -99%;
+}
+.texto{
+    position: relative;
+    top: -350px;
+    color: white;
+    left: 23%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 32px;
+    border: solid 5px ;
+    width: 52%;
+    border-image: linear-gradient(45deg,#fd7200,#ff3300) 1;
+ 
+
+}
+
+
+.texto h1{
+    margin: 10px;
+    background:rgb(255, 255, 255);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
 
