@@ -119,6 +119,54 @@ li a:hover {
 
 
 .carrusel{
-    width: 100%;
-    height: 92vh;
+    width: 80%;
+    height: 500px;
+    background-color: rgb(226, 226, 226);
 }
+
+.carrusel .grande{
+    width: 200%;
+    background-color: #cccccc;
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.carrusel .img{
+    width: calc( 95% / 2 );
+    height: 70px;
+    margin-left: 10px;
+    background-color: rgb(240, 240, 240);
+}
+
+.carrusel .puntos{
+    width: 90%;
+    margin: 20px;
+    padding: 50px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+
+    
+
+}
+
+.carrusel .punto{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(212, 212, 212);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.carrusel .punto.activo{
+    background-color: #ff5e00;
+}
+
