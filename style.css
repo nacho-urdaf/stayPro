@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -27,12 +31,10 @@ body {
 
 .logo {
     text-transform: capitalize;
-    padding-left: 30px;
+    padding: 15px 0 0 40px;
     color: white;
     display: flex;
     font-size: 24px;
-    margin-top: -5px;
-    margin-bottom: 5px;
 }
 
 .pro {
@@ -74,30 +76,37 @@ body {
 
 li{
     list-style: none;
+    
 }
 
-a{
+nav a{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     color: rgb(255, 255, 255);
-    }
+}
+
 
     
 .despegable{
     position: absolute;
 }
+
+
 .despegable li{
     position: relative;
     left: -50px;
-
+    
 }
 
 li a:hover {
     text-decoration: underline 3px;
     text-decoration-color: #ff5e00;
     text-decoration-skip: 10px;
+    color: rgb(223, 223, 223);     
 }
+
+
 
 
 .texto {
@@ -112,61 +121,165 @@ li a:hover {
 .texto h1 {
     padding: 10px;
     border: 3px solid;
+    font-size: 48px;
     border-color:#ff5e00;
     border-image: linear-gradient(45deg,#ff5e00ee,rgb(20, 20, 20),rgba(255, 1, 1, 0.966)) 1;
     color: white;
 }
 
 
-.carrusel{
-    width: 80%;
-    height: 500px;
-    background-color: rgb(226, 226, 226);
-}
-
-.carrusel .grande{
-    width: 200%;
-    background-color: #cccccc;
-    padding: 10px;
-
+.slider{
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-
+    justify-content: center;
 }
 
-.carrusel .img{
-    width: calc( 95% / 2 );
-    height: 70px;
-    margin-left: 10px;
-    background-color: rgb(240, 240, 240);
-}
-
-.carrusel .puntos{
-    width: 90%;
-    margin: 20px;
-    padding: 50px;
-
+/* border-image: linear-gradient(45deg,#ff5e00ee,rgb(20, 20, 20),rgba(255, 1, 1, 0.966)) 1;*/
+.slider-container {
+    border: solid 4px ;
+    border-image: linear-gradient(45deg,#757575ee,rgba(196, 196, 196, 0.966)) 1;
+    color: white;
+    border-radius: 9px ;
     display: flex;
-    flex-flow: row nowrap;
+    width: 70%;
+    height: 90%;
+    margin-top: 75px;
+    overflow-x: scroll;
+    
+    /* Vamos a añadir esto 👇 */
+    scroll-snap-type: x mandatory;
+    
+  }
+
+
+
+  
+
+
+  .slider-container>div{
+    background-color: rgb(155, 154, 154);
+    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
 
 
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+
+.slider-container .contenedor{
+    margin-left: 50px;
+    width: 45%;
+    height: 60%;
+    color: rgb(221, 221, 221);
+    display: flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items: flex-start;
+}
+.slider-container h1{
     
-
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-family:Arial, Helvetica, sans-serif ;    
 }
 
-.carrusel .punto{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(212, 212, 212);
-    margin: 10px;
-    cursor: pointer;
+.slider-container p{
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    width: 75%;
+    
+    
+}
+.slider-container img{
+    width: 30%;
+    height: 30%;
+    margin-right: 70px;
 }
 
-.carrusel .punto.activo{
-    background-color: #ff5e00;
+
+.slider-container>div:nth-child(1){
+    background: linear-gradient(to bottom, rgba(19, 61, 252, 0.473) 0%, rgba(39, 18, 228, 0.336) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;}
+
+.slider-container>div:nth-child(2){
+    background: linear-gradient(to bottom, rgba(19, 61, 252, 0.473) 0%, rgba(39, 18, 228, 0.336) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
 }
 
+.slider-container>div:nth-child(3){
+    background-image: linear-gradient(to top, #b95852 10%, #bb4949 70%) ;
+    
+}
+
+.slider-container>div:nth-child(4){
+    background-image: linear-gradient(to top, #b95852 10%, #bb4949 70%) ;
+}
+
+.slider-container>div:nth-child(5){
+    background: linear-gradient(to bottom, rgba(19, 61, 252, 0.473) 0%, rgba(39, 18, 228, 0.336) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;}
+
+
+.slider-container>div:nth-child(6){
+    background: linear-gradient(to bottom, rgba(19, 61, 252, 0.473) 0%, rgba(39, 18, 228, 0.336) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;}
+
+
+.slider-container>div:nth-child(7){
+    background-image: linear-gradient(to top, #b95852 10%, #bb4949 70%) ;
+}
+
+.slider-container>div:nth-child(8){
+    background-image: linear-gradient(to top, #b95852 10%, #bb4949 70%) ;
+}
+
+
+
+
+.slider-container>div a{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    padding: 7px 0 ;
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    border: 2px solid rgb(214, 214, 214);  
+    border-radius: 50px;  
+    background-color: rgb(214, 214, 214);
+}
+
+.slider-container>div a:hover{
+    background:#ffffff;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+  
+#athletes{
+    width: 100%;
+    height:65vh;
+    background-color: #989898;
+    display: inline-block;
+}
+
+.athletes-slider{
+    overflow-x: scroll;
+    
+    /* Vamos a añadir esto 👇 */
+    scroll-snap-type: x mandatory;
+} 
+.athletes-contenedor{
+    object-fit: cover;
+    scroll-snap-align: center;
+}   
