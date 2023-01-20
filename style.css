@@ -10,7 +10,8 @@ body {
 
 
 .main {
-    background-image: url("https://images.pexels.com/photos/685530/pexels-photo-685530.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),url("https://images.pexels.com/photos/685530/pexels-photo-685530.jpeg?auto=compress&cs=tinysrgb&w=1600");
+
     height: 100vh;
     width: 100%;
     background-position: center;
@@ -68,13 +69,13 @@ body {
     
   }
   
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
 
 
-li{
+nav li{
     list-style: none;
     
 }
@@ -99,7 +100,7 @@ nav a{
     
 }
 
-li a:hover {
+nav li a:hover {
     text-decoration: underline 3px;
     text-decoration-color: #ff5e00;
     text-decoration-skip: 10px;
@@ -130,7 +131,7 @@ li a:hover {
 
 .slider{
     width: 100%;
-    height: 100vh;
+    height: 130vh;
     background-color: #161616;
     display: flex;
     justify-content: center;
@@ -144,7 +145,7 @@ li a:hover {
     border-radius: 9px ;
     display: flex;
     width: 70%;
-    height: 90%;
+    height:50%;
     margin-top: 75px;
     overflow-x: scroll;
     
@@ -201,7 +202,7 @@ li a:hover {
     
 }
 .slider-container img{
-    width: 30%;
+    width: 25%;
     height: 30%;
     margin-right: 70px;
 }
@@ -217,12 +218,12 @@ li a:hover {
 }
 
 .slider-container>div:nth-child(3){
-    background-image: linear-gradient(to top, #b95852 10%, #bb4949 70%) ;
+    background-image: linear-gradient(to top, #ee4b43 10%, #ec3f3f 70%) ;
     
 }
 
 .slider-container>div:nth-child(4){
-    background-image: linear-gradient(to top, #b95852 10%, #bb4949 70%) ;
+    background-image: linear-gradient(to top, #ee4b43 10%, #ec3f3f 70%) ;
 }
 
 .slider-container>div:nth-child(5){
@@ -236,11 +237,11 @@ li a:hover {
 
 
 .slider-container>div:nth-child(7){
-    background-image: linear-gradient(to top, #b95852 10%, #bb4949 70%) ;
+    background-image: linear-gradient(to top, #ee4b43 10%, #ec3f3f 70%) ;
 }
 
 .slider-container>div:nth-child(8){
-    background-image: linear-gradient(to top, #b95852 10%, #bb4949 70%) ;
+    background-image: linear-gradient(to top, #ee4b43 10%, #ec3f3f 70%) ;
 }
 
 
@@ -266,20 +267,108 @@ li a:hover {
 }
 
   
+
+
 #athletes{
     width: 100%;
-    height:65vh;
-    background-color: #989898;
-    display: inline-block;
+    height: 50vh;
+    background-color: rgb(167, 167, 167);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    position: absolute;
 }
 
-.athletes-slider{
+#athletes .athletes{
+    width: 65%;
+    height: 100%;
+    position: relative;
+    top: -190px;
+    display: flex;
+    border: solid 10px;
+    border-image:linear-gradient(to bottom,  #161616,rgb(235, 235, 235),#161616)1;
     overflow-x: scroll;
-    
-    /* Vamos a añadir esto 👇 */
     scroll-snap-type: x mandatory;
-} 
-.athletes-contenedor{
+}
+
+  .athletes .marketing {
+    flex: 0 0 100%;
+    width: 100%;
     object-fit: cover;
     scroll-snap-align: center;
-}   
+  }
+
+.athletes .img{
+    width: 50%;
+    height: 100%;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.athletes .info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(214, 214, 214);
+    font-family: Arial, Helvetica, sans-serif;
+    background:linear-gradient(to bottom,#615853,#c93932fa);
+}
+.info h1{
+    text-transform: capitalize;
+}
+
+.info h3{
+    width: 85%;
+}
+
+.info ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.info li{
+    margin: 15px;
+}
+
+.info p{
+    text-transform: uppercase;
+}
+
+
+.marketing{
+    display: flex;
+    
+}
+
+
+
+.marketing a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.marketing  .atras i {
+    
+    display: block;
+    position: relative;
+    left: -575px;
+    top: 86%;
+    width:0;
+    
+}
+.marketing  .siguiente i{
+    display: block;
+    position: relative;
+    left: -545px;
+    top: 86%;
+    width:0;
+    height: 0px;
+}
+
+
