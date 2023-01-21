@@ -17,7 +17,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    z-index: -2;
 }
 
 
@@ -28,6 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
 }
 
 .logo {
@@ -51,7 +52,7 @@ body {
     display: flex;
 }
 .extra li{
-    margin: 15px 70px 0 10px;
+    margin: 15px 70px 0 23px;
 }
 
 
@@ -273,10 +274,9 @@ nav li a:hover {
     width: 100%;
     height: 50vh;
     background-color: rgb(167, 167, 167);
-    position: absolute;
+    
     display: flex;
     justify-content: center;
-    position: absolute;
 }
 
 #athletes .athletes{
@@ -309,6 +309,8 @@ nav li a:hover {
     padding: 0;
 }
 
+
+
 .athletes .info{
     width: 50%;
     display: flex;
@@ -317,8 +319,12 @@ nav li a:hover {
     align-items: center;
     color: rgb(214, 214, 214);
     font-family: Arial, Helvetica, sans-serif;
-    background:linear-gradient(to bottom,#615853,#c93932fa);
+    background:linear-gradient(to bottom,#293e5a,#235094fa);
 }
+
+    
+
+
 .info h1{
     text-transform: capitalize;
 }
@@ -372,3 +378,100 @@ nav li a:hover {
 }
 
 
+
+.about{
+    width: 100%;
+    height: 100vh;
+    background-color: #3d41356b;
+    display: flex;
+}
+.about .linea{
+
+
+    display: flex;
+    padding-top: 30px;
+}
+.about>div>hr{
+    height: 96%;
+    background-color: rgb(0, 0, 0);
+    border: solid .5px rgb(0, 0, 0);
+}
+
+.expanding{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.expanding div{
+    width: 95%;
+    background-color: rgb(71, 71, 71);
+    color: white;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.expanding hr{
+    width: 90%;
+    background-color: rgb(0, 0, 0);
+    border: solid .5px rgb(0, 0, 0);
+}
+.expanding h1{
+    font-size: 32px;
+}
+.expanding h2{
+    font-size: 14px;
+   
+}
+
+
+.expanding h3{
+    font-size: 20px;
+    width: 90%;
+    
+}
+.expanding p{
+    color: rgb(194, 194, 194);
+    width: 90%;
+}
+
+.imagenes{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.imagenes h3{
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    width: 70%;
+
+}
+.imagenes div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.imagenes img{
+    margin: 10px;
+    transition: .4s;
+    width: 40%;
+}
+
+.imagenes div img:hover{
+    width: 41%;
+    border: solid 3px rgb(56, 56, 56);
+}
